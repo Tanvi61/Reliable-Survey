@@ -1,7 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Performance Optimization: Resource Preconnects & DNS Prefetch -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
     <meta charset="UTF-8">
+
+    <!-- Google Analytics (GA4 - gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N13T37FJ7D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-N13T37FJ7D');
+    </script>
+
+    <!-- Google Search Console (GSC) Verification -->
+    <meta name="google-site-verification" content="GSC_RELIABLE_LAND_SURVEY_VERIFICATION_TOKEN" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Reliable Land Survey Consultancy Pune</title>
     <meta name="description" content="Get in touch with our survey engineers for project quotations, technical consultation, or office visits in Pune, Maharashtra. Phone: +91 96046 46777.">
@@ -41,10 +61,10 @@
         <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20261010_03">
-    <link rel="stylesheet" href="css/responsive.css?v=20261010_03">
-    <link rel="stylesheet" href="css/header-footer.css?v=20261010_03">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=20261010-11">
+    <link rel="stylesheet" href="css/responsive.css?v=20261010-11">
+    <link rel="stylesheet" href="css/header-footer.css?v=20261010-11">
 
     <!-- Strictly prevent horizontal overflow on all viewports -->
     <style>
@@ -98,10 +118,7 @@
         position: fixed !important;
         right: 18px !important;
         right: calc(18px + env(safe-area-inset-right, 0px)) !important;
-        top: 60% !important;
-        bottom: auto !important;
-        transform: translateY(-50%) !important;
-        -webkit-transform: translateY(-50%) !important;
+        bottom: 85px !important; bottom: calc(85px + env(safe-area-inset-bottom, 0px)) !important; top: auto !important; transform: none !important; -webkit-transform: none !important;
         z-index: 2147483647 !important;
         display: flex !important;
         flex-direction: column !important;
@@ -139,10 +156,7 @@
         .floating-actions {
           right: 16px !important;
           right: calc(16px + env(safe-area-inset-right, 0px)) !important;
-          top: 42% !important;
-          bottom: auto !important;
-          transform: translateY(-50%) !important;
-          -webkit-transform: translateY(-50%) !important;
+          bottom: 85px !important; bottom: calc(85px + env(safe-area-inset-bottom, 0px)) !important; top: auto !important; transform: none !important; -webkit-transform: none !important;
           z-index: 2147483647 !important;
           gap: 10px !important;
         }
@@ -241,7 +255,7 @@
 </head>
 <body>
     <!-- Floating Quick Actions (Persistent on right side across entire page from top to bottom) -->
-    <div class="floating-actions" style="position: fixed !important; right: 16px !important; top: 42% !important; bottom: auto !important; transform: translateY(-50%) !important; -webkit-transform: translateY(-50%) !important; z-index: 2147483647 !important; display: flex !important; flex-direction: column !important; gap: 10px !important; visibility: visible !important; opacity: 1 !important;">
+    <div class="floating-actions" style="position: fixed !important; right: 16px !important; bottom: 85px !important; top: auto !important; transform: none !important; -webkit-transform: none !important; z-index: 2147483647 !important; display: flex !important; flex-direction: column !important; gap: 10px !important; visibility: visible !important; opacity: 1 !important;">
         <a href="https://wa.me/919604646777" target="_blank" rel="noopener" class="float-btn whatsapp" aria-label="WhatsApp" title="Chat on WhatsApp" style="background-color: #25D366 !important; display: flex !important; visibility: visible !important; opacity: 1 !important;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.89-4.443 9.891-9.891.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.74-1.975zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
             <span class="float-tooltip">WhatsApp Us</span>
@@ -258,23 +272,17 @@
         if (!el) return;
         var isMobile = window.innerWidth <= 1024;
         el.style.setProperty('position', 'fixed', 'important');
-        el.style.setProperty('bottom', 'auto', 'important');
-        el.style.setProperty('transform', 'translateY(-50%)', 'important');
-        el.style.setProperty('-webkit-transform', 'translateY(-50%)', 'important');
+        el.style.setProperty('bottom', isMobile ? '85px' : '90px', 'important');
+        el.style.setProperty('top', 'auto', 'important');
+        el.style.setProperty('transform', 'none', 'important');
+        el.style.setProperty('-webkit-transform', 'none', 'important');
         el.style.setProperty('z-index', '2147483647', 'important');
         el.style.setProperty('display', 'flex', 'important');
         el.style.setProperty('flex-direction', 'column', 'important');
         el.style.setProperty('visibility', 'visible', 'important');
         el.style.setProperty('opacity', '1', 'important');
-        if (isMobile) {
-          el.style.setProperty('top', '42%', 'important');
-          el.style.setProperty('right', '16px', 'important');
-          el.style.setProperty('gap', '10px', 'important');
-        } else {
-          el.style.setProperty('top', '60%', 'important');
-          el.style.setProperty('right', '18px', 'important');
-          el.style.setProperty('gap', '12px', 'important');
-        }
+        el.style.setProperty('right', isMobile ? '16px' : '18px', 'important');
+        el.style.setProperty('gap', isMobile ? '10px' : '12px', 'important');
       }
       alignFloatingWidget();
       window.addEventListener('resize', alignFloatingWidget);
@@ -299,32 +307,32 @@
        TOP BAR (Shared Component)
     ========================================== -->
     <div id="site-topbar"></div>
-    <script src="js/topbar.js?v=20261010_03"></script>
+    <script src="js/topbar.js?v=20261010-06" defer></script>
 
     <nav class="nav-exact anim-nav">
         <div class="nav-logo">
-            <img src="assets/logo/logo-transparent.png" alt="Logo">
+            <img fetchpriority="high" decoding="async" src="assets/logo/logo-transparent.png" alt="Reliable Land Survey Consultancy Pune - Land & Drone Survey Services" title="Reliable Land Survey Consultancy - Expert Land Surveyors in Pune, Maharashtra">
         </div>
         <div class="nav-links" id="mobileNavMenu">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <div class="nav-dropdown">
-                <a href="services.html" class="nav-dropdown-toggle">
+                <a href="land-survey-services.html" class="nav-dropdown-toggle">
                     Services
                     <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg>
                 </a>
                 <div class="nav-dropdown-menu">
                     <a href="topographical-survey.html" class="nav-dropdown-item">Topographical Survey</a>
-                    <a href="dgps-gnss-control.html" class="nav-dropdown-item">DGPS / GNSS Control</a>
+                    <a href="dgps-gnss-control-survey.html" class="nav-dropdown-item">DGPS / GNSS Control</a>
                     <a href="total-station-survey.html" class="nav-dropdown-item">Total Station Survey</a>
-                    <a href="rtk-drone-mapping.html" class="nav-dropdown-item">RTK Drone Mapping</a>
-                    <a href="lidar-3d-scanning.html" class="nav-dropdown-item">Drone LiDAR Scanning</a>
-                    <a href="drone-photogrammetry.html" class="nav-dropdown-item">Drone Photogrammetry</a>
-                    <a href="road-highway.html" class="nav-dropdown-item">Road & Highway Survey</a>
-                    <a href="rail-metro.html" class="nav-dropdown-item">Rail & Metro Survey</a>
-                    <a href="cad-gis-processing.html" class="nav-dropdown-item">CAD & GIS Processing</a>
+                    <a href="rtk-drone-mapping-survey.html" class="nav-dropdown-item">RTK Drone Mapping</a>
+                    <a href="lidar-3d-scanning-survey.html" class="nav-dropdown-item">Drone LiDAR Scanning</a>
+                    <a href="drone-photogrammetry-survey.html" class="nav-dropdown-item">Drone Photogrammetry</a>
+                    <a href="road-highway-survey.html" class="nav-dropdown-item">Road & Highway Survey</a>
+                    <a href="rail-metro-survey.html" class="nav-dropdown-item">Rail & Metro Survey</a>
+                    <a href="cad-gis-processing-services.html" class="nav-dropdown-item">CAD & GIS Processing</a>
                     <div class="dropdown-footer-link">
-                        <a href="services.html">All Services &rarr;</a>
+                        <a href="land-survey-services.html">All Services &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -346,13 +354,17 @@
         style="position: relative; width: 100%; height: 480px; max-height: 500px; min-height: 440px; background-color: #eaf4fc; padding-top: 140px; overflow: hidden; box-sizing: border-box;">
 
         <!-- Animated Background Image (Matches About Us page exactly) -->
-        <img src="assets/images/about-hero-clean.jpg" alt="Geospatial Infrastructure Surveying" class="bg-pan-anim"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; object-position: right center; z-index: 1;">
+        <img decoding="async" src="assets/images/about-hero-clean.jpg" alt="Contact Reliable Land Survey Consultancy Pune - Request Survey Quotation & Site Mobilization" title="Contact Us - Reliable Land Survey Consultancy Pune Office" class="bg-pan-anim" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; object-position: right center; z-index: 1;">
 
         <!-- Overlay Text (Matches About Us page exactly) -->
         <div
             style="position: absolute; top: 135px; left: 0; width: 100%; height: calc(100% - 135px); display: flex; flex-direction: column; justify-content: center; padding: 0 8%; z-index: 2; pointer-events: none; box-sizing: border-box;">
             <div class="text-fade-in-left" style="max-width: 600px; padding-bottom: 20px; pointer-events: auto;">
+            <nav aria-label="breadcrumb" class="breadcrumb-container" style="margin-bottom: 14px;">
+                    <ol class="breadcrumb" style="list-style: none; padding: 0; margin: 0; font-size: 11.5px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                        <li class="breadcrumb-item"><a href="index.html" style="color: #4b5563; text-decoration: none; transition: color 0.2s;">HOME</a></li><li aria-hidden="true" style="color: var(--accent-orange);">&raquo;</li><li class="breadcrumb-item active" style="color: var(--accent-orange); font-weight: 800; white-space: nowrap;" aria-current="page">CONTACT US</li>
+                    </ol>
+                </nav>
                 <h5
                     style="color: var(--primary-navy); font-weight: 700; letter-spacing: 2px; font-size: 14px; margin-bottom: 10px;">
                     CONTACT US</h5>
@@ -392,6 +404,14 @@
                 .contact-grid-spaced {
                     grid-template-columns: 1fr;
                     gap: 30px;
+                }
+                .contact-info-list {
+                    flex: none !important;
+                    gap: 14px !important;
+                    margin: 16px 0 20px 0 !important;
+                }
+                .contact-box-right .info-block-row {
+                    flex: none !important;
                 }
             }
             /* GET IN TOUCH CONVERGING ANIMATION & CARD STYLING */
@@ -574,12 +594,13 @@
                 background: #f8fafc;
                 border: 1.5px solid #cbd5e1;
                 border-radius: 10px;
-                padding: 14px 16px;
+                padding: 15px 18px;
                 display: flex;
                 gap: 14px;
                 align-items: center;
                 position: relative;
                 overflow: hidden;
+                flex: 1;
                 transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
                             border-color 0.3s ease, 
                             box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
@@ -622,6 +643,10 @@
             .info-block-row:nth-child(5),
             .info-block-row:nth-child(5)::after {
                 animation-delay: 3.2s;
+            }
+            .info-block-row:nth-child(6),
+            .info-block-row:nth-child(6)::after {
+                animation-delay: 4.0s;
             }
 
             /* Continuous soft pulse for icon badges inside the tabs */
@@ -760,7 +785,9 @@
                     
                     <div id="contactFormStatus" style="display: none; padding: 16px 20px; border-radius: 10px; margin-bottom: 22px; font-size: 14.5px; line-height: 1.55; box-shadow: 0 4px 15px rgba(8, 43, 76, 0.06); transition: all 0.3s ease;"></div>
 
-                    <form id="contactForm" action="https://formsubmit.co/tanviii6104@gmail.com" method="POST" style="display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
+                    
+                    
+                    <form id="contactForm" action="https://formsubmit.co/tanviii6104@gmail.com" method="POST" style="display: flex; flex-direction: column; justify-content: space-between; flex: 1; margin-top: 6px;">
                         <!-- Destination & Configuration Fields -->
                         <input type="hidden" name="_subject" value="New Project Quotation Request - Reliable Land Surveyors">
                         <input type="hidden" name="_template" value="table">
@@ -769,50 +796,76 @@
                         <input type="hidden" name="_next" id="contactNext" value="">
                         <input type="text" name="_honey" style="display:none">
 
-                        <div class="contact-form-grid">
+                        <div class="contact-form-grid" style="gap: 14px;">
                             <div>
                                 <label class="contact-label" for="contact-name">Full Name *</label>
                                 <input type="text" id="contact-name" name="Full Name" class="contact-input-field" placeholder="Enter full name" autocomplete="name" required>
                             </div>
                             <div>
-                                <label class="contact-label" for="contact-company">Company / Firm Name</label>
-                                <input type="text" id="contact-company" name="Company / Firm Name" class="contact-input-field" placeholder="Organization name" autocomplete="organization">
+                                <label class="contact-label" for="contact-phone">Phone Number *</label>
+                                <input type="tel" id="contact-phone" name="Phone Number" class="contact-input-field" placeholder="+91 96046 46777" autocomplete="tel" required>
                             </div>
                             <div>
                                 <label class="contact-label" for="contact-email">Email Address *</label>
                                 <input type="email" id="contact-email" name="Email Address" class="contact-input-field" placeholder="name@example.com" autocomplete="email" required>
                             </div>
                             <div>
-                                <label class="contact-label" for="contact-phone">Phone Number *</label>
-                                <input type="tel" id="contact-phone" name="Phone Number" class="contact-input-field" placeholder="+91 96046 46777" autocomplete="tel" required>
-                            </div>
-                            <div class="full-width">
-                                <label class="contact-label" for="contact-service">Survey Service Required *</label>
+                                <label class="contact-label" for="contact-service">Survey Service *</label>
                                 <select id="contact-service" name="Survey Service Required" class="contact-input-field" required style="cursor: pointer;">
-                                    <option value="" disabled selected>Select a survey service...</option>
+                                    <option value="" disabled selected>Select service required...</option>
                                     <option value="Topographical Survey">Topographical & Land Survey</option>
-                                    <option value="DGPS / GNSS Control">DGPS / GNSS Control Establishment</option>
-                                    <option value="Total Station Survey">Total Station Measurement & Layout</option>
-                                    <option value="RTK Drone Mapping">RTK Drone Aerial Mapping & Photogrammetry</option>
+                                    <option value="DGPS / GNSS Control">DGPS / GNSS Control</option>
+                                    <option value="Total Station Survey">Total Station Measurement</option>
+                                    <option value="RTK Drone Mapping">RTK Drone Aerial Mapping</option>
                                     <option value="Drone LiDAR Scanning">Drone LiDAR & 3D Scanning</option>
-                                    <option value="Road & Highway Survey">Road & Highway Alignment Survey</option>
-                                    <option value="Rail & Metro Survey">Rail & Metro Infrastructure Survey</option>
-                                    <option value="CAD & GIS Processing">CAD Drafting & GIS Processing</option>
+                                    <option value="Drone Photogrammetry">Drone Photogrammetry Survey</option>
+                                    <option value="Road & Highway Survey">Road & Highway Survey</option>
+                                    <option value="Rail & Metro Survey">Rail & Metro Survey</option>
+                                    <option value="CAD & GIS Processing">CAD & GIS Processing</option>
                                     <option value="General Consultation">General Survey Consultation</option>
                                 </select>
                             </div>
                             <div class="full-width">
-                                <label class="contact-label" for="contact-location">Project Location & Scope</label>
-                                <input type="text" id="contact-location" name="Project Location & Scope" class="contact-input-field" placeholder="e.g. Pune, PCMC, Hinjewadi, or Acreage/KM">
-                            </div>
-                            <div class="full-width">
-                                <label class="contact-label" for="contact-message">Message *</label>
-                                <textarea id="contact-message" name="Project Details & Deliverables" class="contact-input-field" rows="3" placeholder="Describe site details, required deliverables (Contours, 3D CAD, Point Cloud), and timeline..." required style="resize: vertical;"></textarea>
+                                <label class="contact-label" for="contact-message">Project Location, Scope & Deliverables *</label>
+                                <textarea id="contact-message" name="Project Details & Deliverables" class="contact-input-field" rows="3" placeholder="Briefly describe project location, estimated area/km, required deliverables (Contours, 3D CAD, Point Cloud)..." required style="resize: vertical; min-height: 85px;"></textarea>
                             </div>
                         </div>
 
-                        <div style="margin-top: 18px;">
-                            <button type="submit" id="contactSubmitBtn" class="btn btn-primary submit-consultation-btn" style="width: 100%; padding: 15px 24px; font-size: 15px; border-radius: 8px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                        <!-- Streamlined Anti-Spam Captcha Verification (QA Item 27) -->
+                        <div class="reliable-captcha-section" style="margin-top: 14px; padding: 12px 14px; background: #f8fafc; border: 1.5px solid #d5e2ef; border-radius: 10px; box-shadow: 0 2px 8px rgba(8, 43, 76, 0.04);">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                                <span style="font-size: 11.5px; font-weight: 800; color: #082b4c; letter-spacing: 0.6px; text-transform: uppercase; font-family: var(--font-heading); display: inline-flex; align-items: center; gap: 5px;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#082b4c" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                    Security Verification <span style="color: #ef4444;">*</span>
+                                </span>
+                                <label style="display: inline-flex; align-items: center; gap: 8px; margin: 0; cursor: pointer; font-size: 13px; font-weight: 600; color: #1e293b; user-select: none;">
+                                    <input type="checkbox" id="robotCheck" style="width: 17px; height: 17px; cursor: pointer; accent-color: #082b4c;">
+                                    <span>I'm not a robot</span>
+                                </label>
+                            </div>
+
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <!-- Captcha Display Badge -->
+                                <div id="captchaCodeBadge" style="user-select: none; -webkit-user-select: none; background: linear-gradient(135deg, #082b4c, #123f68); color: #ffffff; font-family: 'Courier New', Courier, monospace; font-size: 16px; font-weight: 800; letter-spacing: 3px; padding: 7px 10px; border-radius: 6px; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); text-decoration: line-through; border: 1px dashed #f47b20; flex-shrink: 0; text-align: center; min-width: 88px; box-sizing: border-box;">
+                                    <span id="captchaCodeText">7W3K9</span>
+                                </div>
+                                <!-- Refresh Button -->
+                                <button type="button" id="btnRefreshCaptcha" title="Generate New Captcha Code" aria-label="Refresh Security Code" style="background: #ffffff; border: 1.5px solid #d5e2ef; color: #082b4c; width: 36px; height: 36px; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; transition: all 0.2s ease;">
+                                    <svg id="captchaRefreshIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.4s ease;"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+                                </button>
+                                <!-- Captcha Input Field -->
+                                <input type="text" id="contactCaptchaInput" name="captcha_code" class="contact-input-field" placeholder="Code" maxlength="6" autocomplete="off" required style="flex: 1; min-width: 0; padding: 8px 10px; font-size: 13.5px; text-transform: uppercase; font-weight: 700; letter-spacing: 2px;">
+                            </div>
+
+                            <!-- Captcha Validation Error Notice -->
+                            <div id="captchaError" style="display: none; margin-top: 8px; padding: 7px 12px; border-radius: 6px; background: #fef2f2; border: 1px solid #f87171; color: #b91c1c; font-size: 12.5px; font-weight: 600; align-items: center; gap: 6px;">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                <span id="captchaErrorMsg">Please enter the security code.</span>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 14px;">
+                            <button type="submit" id="contactSubmitBtn" class="btn btn-primary submit-consultation-btn" style="width: 100%; padding: 14px 24px; font-size: 15px; border-radius: 8px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center;">
                                 Submit Consultation Request
                             </button>
                         </div>
@@ -822,81 +875,76 @@
 
             <!-- Box 2 (Right): Headquarters Card -->
             <div class="contact-box-card contact-box-right">
-                <div style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;">
+                <div style="display: flex; flex-direction: column; height: 100%;">
                     <div>
-                        <h3 class="contact-card-header">Direct Office</h3>
-                        <p class="contact-card-sub">Reach our technical desk directly for active field project coordination or visit our central Pune office.</p>
+                        <h3 class="contact-card-header">Direct Office &amp; Technical Desk</h3>
+                        <p class="contact-card-sub" style="margin-bottom: 0;">Reach our technical desk directly for active field project coordination, methodology review, or visit our central Pune office.</p>
+                    </div>
+
+                    <!-- Contact Info Blocks List: Evenly distributed & proportioned -->
+                    <div class="contact-info-list" style="display: flex; flex-direction: column; justify-content: space-between; gap: 12px; margin: 16px 0 18px 0; flex: 1;">
                         
-                        <div style="display: flex; flex-direction: column; gap: 12px;">
-                            
-                            <!-- Address -->
-                            <div class="info-block-row">
-                                <div style="background: rgba(244, 123, 32, 0.12); color: var(--accent-orange); width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                                </div>
-                                <div style="flex: 1;">
-                                    <div class="info-block-tag">HEADQUARTERS LOCATION</div>
-                                    <p style="color: #082b4c; font-size: 15px; font-weight: 800; line-height: 1.35; margin: 0;">Pune, Maharashtra, India</p>
-                                    <p style="color: #1e293b; font-size: 13px; font-weight: 500; margin: 3px 0 0 0; line-height: 1.35;">Executing surveys across Maharashtra &amp; Pan-India</p>
-                                </div>
+                        <!-- 1. Address -->
+                        <div class="info-block-row" style="padding: 14px 18px;">
+                            <div style="background: rgba(244, 123, 32, 0.12); color: var(--accent-orange); width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                             </div>
-
-                            <!-- Proprietors -->
-                            <div class="info-block-row">
-                                <div style="background: rgba(244, 123, 32, 0.12); color: var(--accent-orange); width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                                </div>
-                                <div style="flex: 1;">
-                                    <div class="info-block-tag">PROPRIETORS</div>
-                                    <p style="color: #082b4c; font-size: 15px; font-weight: 800; margin: 0; line-height: 1.4;">Mahesh Deshmukh &amp; Sharad Pingale</p>
-                                </div>
+                            <div style="flex: 1;">
+                                <div class="info-block-tag">HEADQUARTERS LOCATION</div>
+                                <p style="color: #082b4c; font-size: 14.5px; font-weight: 800; margin: 0 0 3px 0; line-height: 1.35;">Pune, Maharashtra, India</p>
+                                <p style="color: #1e293b; font-size: 12.5px; font-weight: 500; margin: 0; line-height: 1.35;">Central Operations Hub • Executing surveys across Maharashtra &amp; Pan-India</p>
                             </div>
+                        </div>
 
-                            <!-- Phone -->
-                            <div class="info-block-row">
-                                <div style="background: rgba(18, 63, 104, 0.08); color: var(--primary-navy); width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                                </div>
-                                <div style="flex: 1;">
-                                    <div class="info-block-tag">DIRECT CONTACT PHONES</div>
-                                    <div style="display: flex; flex-direction: column; gap: 4px;">
-                                        <div style="font-size: 14.5px; color: #082b4c;">
-                                            <span style="font-weight: 700; color: #082b4c;">Mahesh Deshmukh:</span> <a href="tel:+918600044688" style="color: #082b4c; font-size: 15px; font-weight: 800; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--accent-orange)'" onmouseout="this.style.color='#082b4c'">+91 86000 44688</a>
-                                        </div>
-                                        <div style="font-size: 14.5px; color: #082b4c;">
-                                            <span style="font-weight: 700; color: #082b4c;">Sharad Pingale:</span> <a href="tel:+919604646777" style="color: #082b4c; font-size: 15px; font-weight: 800; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--accent-orange)'" onmouseout="this.style.color='#082b4c'">+91 96046 46777</a>
-                                        </div>
+                        <!-- 2. Proprietors & Direct Contact -->
+                        <div class="info-block-row" style="padding: 14px 18px;">
+                            <div style="background: rgba(8, 43, 76, 0.1); color: var(--dark-navy); width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            </div>
+                            <div style="flex: 1;">
+                                <div class="info-block-tag">PROPRIETORS &amp; SENIOR CONSULTANTS</div>
+                                <div style="display: flex; flex-direction: column; gap: 4px;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px;">
+                                        <span style="color: #082b4c; font-size: 14px; font-weight: 800;">Mahesh Deshmukh</span>
+                                        <a href="tel:+918600044688" style="color: var(--accent-orange); text-decoration: none; font-size: 13px; font-weight: 700;">+91 86000 44688</a>
+                                    </div>
+                                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px;">
+                                        <span style="color: #082b4c; font-size: 14px; font-weight: 800;">Sharad Pingale</span>
+                                        <a href="tel:+919604646777" style="color: var(--accent-orange); text-decoration: none; font-size: 13px; font-weight: 700;">+91 96046 46777</a>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Email -->
-                            <div class="info-block-row">
-                                <div style="background: rgba(244, 123, 32, 0.12); color: var(--accent-orange); width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                                </div>
-                                <div style="flex: 1;">
-                                    <div class="info-block-tag">OFFICIAL EMAIL</div>
-                                    <a href="mailto:info@reliablelandsurvey.in" style="color: var(--accent-orange); font-size: 15px; font-weight: 800; text-decoration: none; word-break: break-all;">info@reliablelandsurvey.in</a>
-                                </div>
-                            </div>
-
-                            <!-- Hours -->
-                            <div class="info-block-row">
-                                <div style="background: rgba(18, 63, 104, 0.08); color: var(--primary-navy); width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                </div>
-                                <div style="flex: 1;">
-                                    <div class="info-block-tag">OPERATING HOURS</div>
-                                    <p style="color: #082b4c; font-size: 14.5px; font-weight: 800; margin: 0 0 4px 0;">Monday – Saturday: 9:00 AM – 7:00 PM</p>
-                                    <span style="background: #ffedd5; color: #c2410c; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 4px; letter-spacing: 0.5px; display: inline-block; border: 1px solid rgba(194, 65, 12, 0.2);">CLOSED ON SUNDAYS</span>
-                                </div>
-                            </div>
-
                         </div>
-                    </div>
 
-                    <div style="margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <!-- 3. Official Email -->
+                        <div class="info-block-row" style="padding: 14px 18px;">
+                            <div style="background: rgba(244, 123, 32, 0.12); color: var(--accent-orange); width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div style="flex: 1;">
+                                <div class="info-block-tag">OFFICIAL INQUIRY &amp; RFQ EMAIL</div>
+                                <a href="mailto:info@reliablelandsurvey.in" style="color: var(--accent-orange); text-decoration: none; font-size: 14.5px; font-weight: 800; display: block; margin-bottom: 3px;">info@reliablelandsurvey.in</a>
+                                <p style="color: #1e293b; font-size: 12.5px; font-weight: 500; margin: 0; line-height: 1.35;">Share KMZ site boundaries, tender documents, or survey requirements</p>
+                            </div>
+                        </div>
+
+                        <!-- 4. Operating Hours & Mobilization -->
+                        <div class="info-block-row" style="padding: 14px 18px;">
+                            <div style="background: rgba(8, 43, 76, 0.1); color: var(--dark-navy); width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div style="flex: 1;">
+                                <div class="info-block-tag">OPERATING &amp; MOBILIZATION HOURS</div>
+                                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 3px;">
+                                    <p style="color: #082b4c; font-size: 14px; font-weight: 800; margin: 0;">Monday – Saturday: 9:00 AM – 7:00 PM</p>
+                                    <span style="background: #ffedd5; color: #c2410c; font-size: 11px; font-weight: 800; padding: 2px 7px; border-radius: 4px; letter-spacing: 0.5px; display: inline-block; border: 1px solid rgba(194, 65, 12, 0.2);">CLOSED ON SUNDAYS</span>
+                                </div>
+                                <p style="color: #1e293b; font-size: 12px; font-weight: 500; margin: 0; line-height: 1.35;">Field survey crew mobilization available 24/7 on prior coordination</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div style="margin-top: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
                         <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" class="contact-map-tab-btn" style="background: var(--dark-navy); color: #fff; text-decoration: none; padding: 14px 16px; border-radius: 8px; text-align: center; font-weight: 700; font-size: 14px; display: flex; justify-content: center; align-items: center; gap: 8px; transition: all 0.3s ease;" onmouseover="this.style.background='var(--primary-navy)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='var(--dark-navy)'; this.style.transform='translateY(0)';">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 16 16 12 12 8"/><line x1="8" y1="12" x2="16" y2="12"/></svg> View on Map
                         </a>
@@ -1163,13 +1211,16 @@
         </div>
     </div>
 </section>
-        <footer class="footer">
+        <!-- ==========================================
+       FOOTER
+    ========================================== -->
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <!-- Column 1 -->
                 <div class="footer-brand">
                     <div class="footer-brand-inner" style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; width: 100%;">
-                        <a href="index.html" style="display: block;" title="Reliable Land Survey Consultancy"><img src="assets/logo/logo-transparent.png" alt="Reliable Land Survey Consultancy" class="footer-logo-img" style="height: 100px; width: auto; display: block;"></a>
+                        <a href="index.html" style="display: block;" title="Reliable Land Survey Consultancy"><img decoding="async" loading="lazy" src="assets/logo/logo-transparent.png" alt="Reliable Land Survey Consultancy Official Logo - Pune Land Surveying Services" title="Reliable Land Survey Consultancy - High Precision Geospatial Engineering Solutions" class="footer-logo-img" style="height: 100px; width: auto; display: block;"></a>
                         <ul class="footer-brand-list" style="list-style: none; padding: 0; margin: 0; color: #000; text-align: left; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; width: 100%;">
                             <li>Professional Surveying</li>
                             <li>Geospatial</li>
@@ -1180,13 +1231,13 @@
                     </div>
                 </div>
 
-                                <!-- Column 2 -->
-                <div class="footer-col">
+                <!-- Column 2 -->
+                <div class="footer-col footer-col-links">
                     <h4>Quick Links</h4>
                     <div class="footer-links">
                         <a href="index.html">Home</a>
                         <a href="about.html">About Us</a>
-                        <a href="services.html">Our Services</a>
+                        <a href="land-survey-services.html">Our Services</a>
                         <a href="gallery.html">Project Gallery</a>
                         <a href="review.html">Client Reviews</a>
                         <a href="contact.html">Contact Us</a>
@@ -1194,25 +1245,25 @@
                 </div>
 
                 <!-- Column 3 -->
-                <div class="footer-col">
+                <div class="footer-col footer-col-services">
                     <h4>Our Services</h4>
                     <div class="footer-links">
                         <a href="topographical-survey.html">Topographical Survey</a>
-                        <a href="dgps-gnss-control.html">DGPS / GNSS Control</a>
+                        <a href="dgps-gnss-control-survey.html">DGPS / GNSS Control</a>
                         <a href="total-station-survey.html">Total Station Survey</a>
-                        <a href="rtk-drone-mapping.html">RTK Drone Mapping</a>
-                        <a href="lidar-3d-scanning.html">Drone LiDAR Scanning</a>
-                        <a href="road-highway.html">Road & Highway Survey</a>
-                        <a href="rail-metro.html">Rail & Metro Survey</a>
-                        <a href="cad-gis-processing.html">CAD & GIS Services</a>
+                        <a href="rtk-drone-mapping-survey.html">RTK Drone Mapping</a>
+                        <a href="lidar-3d-scanning-survey.html">Drone LiDAR Scanning</a>
+                        <a href="road-highway-survey.html">Road & Highway Survey</a>
+                        <a href="rail-metro-survey.html">Rail & Metro Survey</a>
+                        <a href="cad-gis-processing-services.html">CAD & GIS Services</a>
                     </div>
                 </div>
-                
-                <!-- Column 4 -->
-                <div class="footer-col">
+
+                <!-- Column 4: Contact -->
+                <div class="footer-col footer-col-contact">
                     <h4>Contact</h4>
-                    <div class="footer-links" style="color: #000; font-size: 0.92rem; gap: 16px;">
-                        <p>Pune, Maharashtra, India</p>
+                    <div class="footer-links" style="color: #000; font-size: 0.92rem; gap: 14px;">
+                        <p style="margin: 0; font-weight: 700; color: #082b4c;">Pune, Maharashtra, India</p>
                         <p style="margin: 0; line-height: 1.55;"><strong>Proprietors:</strong><br>
                             Mahesh Deshmukh<br>
                             <a href="tel:+918600044688" class="footer-phone-link" title="Click to Call Mahesh Deshmukh (+91 86000 44688)" aria-label="Call Mahesh Deshmukh +91 86000 44688">
@@ -1225,39 +1276,51 @@
                                 <span>+91 96046 46777</span>
                             </a>
                         </p>
-                        <p><a href="mailto:info@reliablelandsurvey.in">info@reliablelandsurvey.in</a></p>
-                        <div class="footer-social-icons" style="display: flex; align-items: center; gap: 12px; margin-top: 6px;">
-                            <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-social-link instagram" aria-label="Instagram" style="color: #E1306C; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(225, 48, 108, 0.1); transition: all 0.25s ease;">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        <p style="margin: 0;"><a href="mailto:info@reliablelandsurvey.in" style="color: #000 !important;">info@reliablelandsurvey.in</a></p>
+                        <div class="footer-social-icons" style="display: flex; align-items: center; gap: 12px; margin-top: 4px;">
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-social-link instagram" aria-label="Instagram" style="color: #E1306C; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(225, 48, 108, 0.1); transition: all 0.25s ease;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689-.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                                 </svg>
                             </a>
-                            <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="footer-social-link facebook" aria-label="Facebook" style="color: #1877F2; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(24, 119, 242, 0.1); transition: all 0.25s ease;">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="footer-social-link facebook" aria-label="Facebook" style="color: #1877F2; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(24, 119, 242, 0.1); transition: all 0.25s ease;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                                 </svg>
                             </a>
-                            <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="footer-social-link youtube" aria-label="YouTube" style="color: #FF0000; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(255, 0, 0, 0.1); transition: all 0.25s ease;">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="footer-social-link youtube" aria-label="YouTube" style="color: #FF0000; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(255, 0, 0, 0.1); transition: all 0.25s ease;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                                 </svg>
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <div class="copyright-info" style="display: flex; flex-direction: column; gap: 6px; align-items: center; text-align: center;">
-                    <p>&copy; 2026 <strong>Reliable Land Survey Consultancy</strong>. All Rights Reserved.</p>
-                    <p>Developed by <strong><a href="https://mindaxisinnovation.com/" target="_blank" rel="noopener" class="mindaxis-footer-link" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-decoration: none !important;">MindAxis Innovation Pvt.Ltd</a></strong></p>
-                </div>
 
+                <!-- Column 5: Office Location Map -->
+                <div class="footer-col footer-col-map">
+                    <h4>Office Location</h4>
+                    <div class="footer-map-card">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.04360431358!2d73.79292675000001!3d18.52461645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1689146522361!5m2!1sen!2sin" width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Reliable Land Survey Consultancy Headquarters Location"></iframe>
+                    </div>
+                    <div style="margin-top: 10px; text-align: left;">
+                        <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" class="footer-map-directions-link">
+                            <span>Open in Google Maps</span> &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright-info" style="display: flex; flex-direction: column; gap: 6px; align-items: center; text-align: center; color: var(--accent-orange) !important;">
+                    <p style="color: var(--accent-orange) !important;">&copy; 2026 <strong>Reliable Land Survey Consultancy</strong>. All&nbsp;Rights&nbsp;Reserved.</p>
+                    <p style="color: var(--accent-orange) !important;">Developed by <strong><a href="https://mindaxisinnovation.com/" target="_blank" rel="noopener" class="mindaxis-footer-link" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-decoration: none !important;">MindAxis Innovation Pvt.Ltd</a></strong></p>
+                </div>
             </div>
         </div>
     </footer>
 <!-- Script -->
-    <script src="js/script.js?v=20261009_06"></script>
+    <script src="js/script.js?v=20261010-11" defer></script>
 
     <!-- Contact Form AJAX Submission & Redirect Handler -->
     <script>
@@ -1295,11 +1358,90 @@
             showFormStatus(statusBox, 'Request Sent Successfully!', 'It will get verified within 24 hours.');
         }
 
+        // Captcha State & Logic (QA Item 27)
+        var currentCaptchaCode = '';
+        var captchaTextEl = document.getElementById('captchaCodeText');
+        var captchaInputEl = document.getElementById('contactCaptchaInput');
+        var refreshBtn = document.getElementById('btnRefreshCaptcha');
+        var refreshIcon = document.getElementById('captchaRefreshIcon');
+        var robotCheck = document.getElementById('robotCheck');
+        var captchaError = document.getElementById('captchaError');
+        var captchaErrorMsg = document.getElementById('captchaErrorMsg');
+
+        function generateCaptcha() {
+            var chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+            var code = '';
+            for (var i = 0; i < 5; i++) {
+                code += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            currentCaptchaCode = code;
+            if (captchaTextEl) {
+                captchaTextEl.textContent = code;
+            }
+            if (captchaInputEl) {
+                captchaInputEl.value = '';
+                captchaInputEl.style.borderColor = '#d5e2ef';
+            }
+            if (captchaError) {
+                captchaError.style.display = 'none';
+            }
+        }
+
+        function showCaptchaError(msg) {
+            if (captchaError && captchaErrorMsg) {
+                captchaErrorMsg.textContent = msg;
+                captchaError.style.display = 'flex';
+                captchaError.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        generateCaptcha();
+
+        if (refreshBtn) {
+            refreshBtn.addEventListener('click', function() {
+                if (refreshIcon) {
+                    refreshIcon.style.transform = 'rotate(360deg)';
+                    setTimeout(function() {
+                        refreshIcon.style.transform = 'none';
+                    }, 400);
+                }
+                generateCaptcha();
+            });
+        }
+
         var form = document.getElementById('contactForm');
         if (!form) return;
 
         form.addEventListener('submit', function(e) {
             e.preventDefault();
+
+            // Captcha Verification Checks
+            if (captchaInputEl) {
+                var userCode = captchaInputEl.value.trim().toUpperCase();
+                if (!userCode) {
+                    showCaptchaError('Please enter the 5-character security code.');
+                    captchaInputEl.style.borderColor = '#ef4444';
+                    captchaInputEl.focus();
+                    return;
+                }
+                if (userCode !== currentCaptchaCode) {
+                    showCaptchaError('Security code does not match. A new code has been generated. Please try again.');
+                    captchaInputEl.style.borderColor = '#ef4444';
+                    generateCaptcha();
+                    captchaInputEl.focus();
+                    return;
+                }
+            }
+
+            if (robotCheck && !robotCheck.checked) {
+                showCaptchaError('Please check the "I\'m not a robot" security box.');
+                robotCheck.focus();
+                return;
+            }
+
+            if (captchaError) {
+                captchaError.style.display = 'none';
+            }
 
             var btn = document.getElementById('contactSubmitBtn') || form.querySelector('button[type="submit"]');
             var statusBox = document.getElementById('contactFormStatus');
@@ -1347,6 +1489,8 @@
             .then(function(data) {
                 showFormStatus(statusBox, 'Request Sent Successfully!', 'It will get verified within 24 hours.');
                 form.reset();
+                generateCaptcha();
+                if (robotCheck) robotCheck.checked = false;
             })
             .catch(function(err) {
                 console.warn('AJAX error, falling back to standard submit:', err);
@@ -1361,6 +1505,28 @@
                 }
             });
         });
+    })();
+    </script>
+
+
+    <!-- Auto-select service from URL parameter (e.g. ?service=road-highway-survey) -->
+    <script>
+    (function() {
+        try {
+            var params = new URLSearchParams(window.location.search);
+            var s = params.get('service');
+            if (s && document.getElementById('contact-service')) {
+                var select = document.getElementById('contact-service');
+                var sClean = s.toLowerCase().replace(/[^a-z0-9]/g, '');
+                for (var i = 0; i < select.options.length; i++) {
+                    var optClean = select.options[i].value.toLowerCase().replace(/[^a-z0-9]/g, '');
+                    if (optClean.includes(sClean) || sClean.includes(optClean)) {
+                        select.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+        } catch(e) {}
     })();
     </script>
 

@@ -1172,7 +1172,7 @@ textarea {
   background-image:
     linear-gradient(to bottom, #f8fafc 0%, rgba(248, 250, 252, 0) 150px),
     linear-gradient(to top, #e8f4fc 0%, rgba(232, 244, 252, 0) 150px),
-    url('../assets/images/Our-process-bg.png');
+    url('../assets/images/our-process-bg.png');
   background-size: 100% 100%, 100% 100%, cover;
   background-position: top, bottom, center;
   background-repeat: no-repeat, no-repeat, no-repeat;
@@ -1187,22 +1187,26 @@ textarea {
 .process-line-bg {
   position: absolute;
   top: 36px;
-  left: 0;
-  width: 100%;
+  left: calc(100% / 12);
+  width: calc(100% * 5 / 6);
   height: 4px;
   background: var(--border-light);
+  border-radius: 2px;
   z-index: 1;
+  overflow: hidden;
 }
 
 .process-line-fill {
   position: absolute;
-  top: 36px;
+  top: 0;
   left: 0;
   width: 0%;
-  height: 4px;
-  background: var(--accent-orange);
+  height: 100%;
+  background: linear-gradient(90deg, #f47b20, #ff8c33);
+  box-shadow: 0 0 12px rgba(244, 123, 32, 0.6);
+  border-radius: 2px;
   z-index: 2;
-  transition: width 1s ease-out;
+  transition: width 0.45s cubic-bezier(0.4, 0, 0.2, 1), height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .process-steps {
@@ -1216,7 +1220,9 @@ textarea {
 .process-step {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
 }
 
 .step-node {
@@ -1232,9 +1238,11 @@ textarea {
   font-weight: 800;
   font-size: 1.1rem;
   color: var(--primary-navy);
-  margin-bottom: 24px;
+  margin: 0 auto 24px auto;
   transition: all var(--transition-fast);
   box-shadow: var(--shadow-sm);
+  position: relative;
+  z-index: 4;
 }
 
 .process-step.active .step-node,
@@ -1251,6 +1259,7 @@ textarea {
   font-weight: 700;
   color: var(--text-dark);
   line-height: 1.35;
+  text-align: center;
 }
 
 /* ==========================================
@@ -1891,10 +1900,11 @@ textarea {
   position: fixed !important;
   right: 18px !important;
   right: calc(18px + env(safe-area-inset-right, 0px)) !important;
-  top: 60% !important;
-  bottom: auto !important;
-  transform: translateY(-50%) !important;
-  -webkit-transform: translateY(-50%) !important;
+  bottom: 90px !important;
+  bottom: calc(90px + env(safe-area-inset-bottom, 0px)) !important;
+  top: auto !important;
+  transform: none !important;
+  -webkit-transform: none !important;
   z-index: 2147483647 !important;
   display: flex !important;
   flex-direction: column !important;
@@ -2098,13 +2108,25 @@ textarea {
 
 .footer-bottom {
   padding-top: 30px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 25px;
+  border-top: none;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   font-size: 0.85rem;
   color: #000000;
+  position: relative;
+  z-index: 5;
+}
+
+.copyright-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  text-align: center;
+  transform: translateY(38px);
 }
 
 .copyright-info p,

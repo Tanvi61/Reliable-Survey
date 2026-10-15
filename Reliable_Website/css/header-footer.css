@@ -361,14 +361,14 @@
    4. FOOTER COMPONENT (.footer)
    ========================================================================== */
 .footer {
-  background-color: var(--primary-navy, #082B4C);
+  background-color: #edf5fc;
   background-image: url('../assets/images/footer-final.png');
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
   color: #000000;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  padding-top: 45px;
+  padding-bottom: 25px;
   border-top: 3px solid var(--accent-orange, #f47b20);
   position: relative;
   z-index: 2;
@@ -384,9 +384,60 @@
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
-  gap: 40px;
-  margin-bottom: 60px;
+  grid-template-columns: 1.25fr 0.85fr 1.1fr 1.2fr 1.5fr;
+  gap: 32px;
+  margin-bottom: 45px;
+}
+
+.footer-col-map {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-map-card {
+  width: 100%;
+  height: 185px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1.5px solid rgba(8, 43, 76, 0.16);
+  box-shadow: 0 4px 14px rgba(8, 43, 76, 0.08);
+  background: #e2e8f0;
+}
+
+/* Polished high-contrast Action Button for Directions */
+.footer-map-directions-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 18px !important;
+  background: #ffffff !important;
+  color: #082b4c !important;
+  border: 1.5px solid var(--accent-orange, #f47b20) !important;
+  border-radius: 6px !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 12px rgba(8, 43, 76, 0.12) !important;
+  transition: all 0.25s ease !important;
+  margin-top: 8px !important;
+  cursor: pointer !important;
+}
+
+.footer-map-directions-link span {
+  color: #082b4c !important;
+  transition: color 0.25s ease !important;
+}
+
+.footer-map-directions-link:hover {
+  background: var(--accent-orange, #f47b20) !important;
+  color: #ffffff !important;
+  border-color: var(--accent-orange, #f47b20) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(244, 123, 32, 0.35) !important;
+}
+
+.footer-map-directions-link:hover span {
+  color: #ffffff !important;
 }
 
 .footer-brand {
@@ -573,16 +624,28 @@
   box-shadow: 0 4px 12px rgba(255, 0, 0, 0.35);
 }
 
-/* Footer Bottom Bar */
+/* Footer Bottom Bar - Centered cleanly on the dark blue artwork bar */
 .footer-bottom {
   padding-top: 30px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 25px;
+  border-top: none;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   font-size: 0.85rem;
   color: #000000;
+  position: relative;
+  z-index: 5;
+}
+
+.copyright-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  text-align: center;
+  transform: translateY(38px);
 }
 
 .copyright-info p,
@@ -610,9 +673,9 @@
 }
 
 /* ==========================================================================
-   5. TABLET TOP BAR ONLY (769px - 1024px: Static, Centered)
+   5. TABLET TOP BAR & FOOTER (768px - 1024px: iPad Mini, Air, Pro, Tablets)
    ========================================================================== */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .top-bar-exact {
     height: 42px;
     padding: 0;
@@ -647,6 +710,56 @@
   }
   .top-bar-divider {
     display: inline-block;
+  }
+
+  /* Tablet Footer: Balanced 2-Row Layout */
+  .footer-grid {
+    display: grid !important;
+    grid-template-columns: 1.25fr 1fr 1.35fr !important;
+    gap: 32px 30px !important;
+    margin-bottom: 45px !important;
+  }
+
+  /* Row 1: Brand (left), Quick Links (center), Contact (right) */
+  .footer-brand {
+    grid-column: 1 / 2 !important;
+    grid-row: 1 / 2 !important;
+  }
+
+  .footer-col-links,
+  .footer-col:nth-of-type(2) {
+    grid-column: 2 / 3 !important;
+    grid-row: 1 / 2 !important;
+  }
+
+  .footer-col-contact,
+  .footer-col:nth-of-type(4) {
+    grid-column: 3 / 4 !important;
+    grid-row: 1 / 2 !important;
+  }
+
+  /* Row 2: Services (spans left 2 cols, 2 sub-columns of 4 each), Office Location Map (right col) */
+  .footer-col-services,
+  .footer-col:nth-of-type(3) {
+    grid-column: 1 / 3 !important;
+    grid-row: 2 / 3 !important;
+  }
+
+  .footer-col-services .footer-links,
+  .footer-col:nth-of-type(3) .footer-links {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px 24px !important;
+  }
+
+  .footer-col-map {
+    grid-column: 3 / 4 !important;
+    grid-row: 2 / 3 !important;
+  }
+
+  .footer-map-card {
+    height: 165px !important;
+    width: 100% !important;
   }
 }
 
@@ -958,7 +1071,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   /* Mobile Continuous Sliding Top Bar */
   .top-bar-exact {
     height: 38px !important;
@@ -1070,13 +1183,32 @@
   .footer-grid {
     display: flex !important;
     flex-direction: column !important;
-    gap: 30px !important;
-    margin-bottom: 40px !important;
+    gap: 26px !important;
+    margin-bottom: 45px !important;
   }
-  .footer-col:nth-child(1) { order: 1; }
-  .footer-col:nth-child(4) { order: 2; margin-bottom: 10px; }
-  .footer-col:nth-child(2) { order: 3; }
-  .footer-col:nth-child(3) { order: 4; }
+  .footer-brand {
+    order: 1 !important;
+  }
+  .footer-col-contact,
+  .footer-col:nth-of-type(4) {
+    order: 2 !important;
+    margin-bottom: 4px !important;
+  }
+  .footer-col-links,
+  .footer-col:nth-of-type(2) {
+    order: 3 !important;
+  }
+  .footer-col-services,
+  .footer-col:nth-of-type(3) {
+    order: 4 !important;
+  }
+  .footer-col-map {
+    order: 5 !important;
+  }
+  .footer-map-card {
+    height: 180px !important;
+    border-radius: 8px !important;
+  }
 
   .footer {
     padding-bottom: 25px !important;
@@ -1086,7 +1218,8 @@
   .footer-bottom {
     flex-direction: column !important;
     text-align: center !important;
-    gap: 15px !important;
-    margin-top: 30px !important;
+    gap: 12px !important;
+    padding-top: 45px !important;
+    padding-bottom: 25px !important;
   }
 }
