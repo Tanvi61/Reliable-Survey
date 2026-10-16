@@ -1206,7 +1206,7 @@ textarea {
   box-shadow: 0 0 12px rgba(244, 123, 32, 0.6);
   border-radius: 2px;
   z-index: 2;
-  transition: width 0.45s cubic-bezier(0.4, 0, 0.2, 1), height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 0.12s ease-out, height 0.12s ease-out;
 }
 
 .process-steps {
@@ -3525,6 +3525,34 @@ a, button, .btn, .nav-btn, summary, [role="button"], .tab-btn, .industry-card, .
   background-position: center;
   background-repeat: no-repeat;
   animation: pulseBg 15s ease-in-out infinite;
+}
+
+.who-we-are-section {
+  padding: 100px 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.who-we-are-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.who-we-are-visual {
+  position: relative;
+  width: 100%;
+}
+
+.who-we-are-visual img {
+  width: 100%;
+  border-radius: 8px;
+  border: 4px solid var(--accent-orange);
+  box-shadow: 0 20px 40px rgba(244, 123, 32, 0.15);
+  position: relative;
+  z-index: 1;
+  display: block;
 }
 
 .copyright-info p,

@@ -835,10 +835,7 @@
   }
 
   .nav-exact.active .nav-logo {
-    position: fixed !important;
-    top: 18px !important;
-    left: 20px !important;
-    z-index: 1000002 !important;
+    display: none !important;
   }
 
   .nav-exact.active .hamburger-exact {

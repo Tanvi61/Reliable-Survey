@@ -153,104 +153,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==========================================
-       4. PROCESS TIMELINE ANIMATION (Connected 1 to 6)
+       4. PROCESS TIMELINE ANIMATION
     ========================================== */
     const processSection = document.querySelector('.process-section');
     const processTimeline = document.querySelector('.process-timeline');
     const processLineFill = document.querySelector('.process-line-fill');
-    const processSteps = document.querySelectorAll('.process-step');
     
-    if (processSection && processTimeline && processSteps.length >= 6) {
-        if (processLineFill) {
-            processLineFill.style.transition = 'width 0.45s cubic-bezier(0.4, 0, 0.2, 1), height 0.45s cubic-bezier(0.4, 0, 0.2, 1)';
-        }
+    if (processSection && processTimeline && processLineFill) {
+        processLineFill.style.transition = 'width 0.12s ease-out, height 0.12s ease-out';
 
-        const setProcessProgress = (pct) => {
-            if (!processLineFill) return;
-            if (window.innerWidth <= 767) {
-                processLineFill.style.width = '100%';
-                processLineFill.style.height = pct + '%';
-            } else {
-                processLineFill.style.height = '100%';
-                processLineFill.style.width = pct + '%';
-            }
-        };
-
-        // Choreographed sequential cascade: Node illuminates -> Line fills connected to next node -> Next node illuminates
-        let hasAnimatedSequence = false;
-        const triggerProcessCascade = async () => {
-            if (hasAnimatedSequence) return;
-            hasAnimatedSequence = true;
-
-            const delay = ms => new Promise(res => setTimeout(res, ms));
-
-            // Reset initial state
-            setProcessProgress(0);
-            processSteps.forEach(s => s.classList.remove('active', 'current-step'));
-
-            // Step 01 illuminates
-            processSteps[0].classList.add('animate', 'active', 'current-step');
-            await delay(250);
-
-            // Line 01 -> 02 draws connected
-            setProcessProgress(20);
-            await delay(450); // wait for line to reach node 02
-
-            // Step 02 illuminates
-            processSteps[0].classList.remove('current-step');
-            processSteps[1].classList.add('animate', 'active', 'current-step');
-            await delay(250);
-
-            // Line 02 -> 03 draws connected
-            setProcessProgress(40);
-            await delay(450); // wait for line to reach node 03
-
-            // Step 03 illuminates
-            processSteps[1].classList.remove('current-step');
-            processSteps[2].classList.add('animate', 'active', 'current-step');
-            await delay(250);
-
-            // Line 03 -> 04 draws connected (unbroken flow)
-            setProcessProgress(60);
-            await delay(450); // wait for line to reach node 04
-
-            // Step 04 illuminates
-            processSteps[2].classList.remove('current-step');
-            processSteps[3].classList.add('animate', 'active', 'current-step');
-            await delay(250);
-
-            // Line 04 -> 05 draws connected
-            setProcessProgress(80);
-            await delay(450); // wait for line to reach node 05
-
-            // Step 05 illuminates
-            processSteps[3].classList.remove('current-step');
-            processSteps[4].classList.add('animate', 'active', 'current-step');
-            await delay(250);
-
-            // Line 05 -> 06 draws connected
-            setProcessProgress(100);
-            await delay(450); // wait for line to reach node 06
-
-            // Step 06 illuminates (Final step)
-            processSteps[4].classList.remove('current-step');
-            processSteps[5].classList.add('animate', 'active', 'current-step');
-            await delay(600);
-            processSteps[5].classList.remove('current-step');
-        };
-
-        const timelineObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    triggerProcessCascade();
-                }
-            });
-        }, { threshold: 0.15 });
-        timelineObserver.observe(processSection);
-
-        // Scroll listener for interactive progress
-        window.addEventListener('scroll', () => {
-            if (hasAnimatedSequence) return; // Keep fully animated state once completed
+        const updateProcessProgress = () => {
             const rect = processTimeline.getBoundingClientRect();
             const windowHeight = window.innerHeight;
             const triggerPoint = windowHeight * 0.75;
@@ -262,34 +174,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 progress = Math.min(100, Math.max(0, (scrolledPastTrigger / distance) * 100));
             }
 
-            setProcessProgress(progress);
+            if (window.innerWidth <= 767) {
+                processLineFill.style.width = '100%';
+                processLineFill.style.height = progress + '%';
+            } else {
+                processLineFill.style.height = '100%';
+                processLineFill.style.width = progress + '%';
+            }
+        };
 
-            // Sync node activation with scroll progress
-            processSteps.forEach((step, idx) => {
-                const threshold = idx * 20;
-                if (progress >= threshold) {
-                    step.classList.add('active');
-                }
-            });
-        }, { passive: true });
-
-        // Touch & click interaction for tablets and mobile devices
-        processSteps.forEach((step, index) => {
-            step.addEventListener('click', () => {
-                hasAnimatedSequence = true;
-                const targetPct = index * 20;
-                setProcessProgress(targetPct);
-                processSteps.forEach((s, i) => {
-                    if (i <= index) {
-                        s.classList.add('active');
-                    } else {
-                        s.classList.remove('active', 'current-step');
-                    }
-                });
-                processSteps.forEach(s => s.classList.remove('current-step'));
-                step.classList.add('current-step');
-            });
-        });
+        window.addEventListener('scroll', updateProcessProgress, { passive: true });
+        window.addEventListener('resize', updateProcessProgress);
+        updateProcessProgress();
     }
 
     /* ==========================================

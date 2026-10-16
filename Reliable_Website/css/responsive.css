@@ -73,7 +73,7 @@ html, body {
     box-shadow: 0 0 12px rgba(244, 123, 32, 0.6);
     z-index: 2;
     border-radius: 2px;
-    transition: width 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: width 0.12s ease-out;
   }
 
   .process-steps {
@@ -190,11 +190,27 @@ html, body {
   }
 
   .about-grid,
+  .who-we-are-grid,
   .why-grid,
   .tech-interactive-grid,
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .who-we-are-section {
+    padding: 60px 20px 70px !important;
+  }
+
+  .who-we-are-grid {
+    max-width: 720px;
+    margin: 0 auto;
+    gap: 32px;
+  }
+
+  .who-we-are-visual img {
+    border-radius: 12px;
+    box-shadow: 0 16px 36px rgba(244, 123, 32, 0.16);
   }
 
   .about-accent-badge {
@@ -232,6 +248,14 @@ html, body {
 @media (max-width: 767px) {
   .section-heading {
     font-size: 2rem;
+  }
+
+  .who-we-are-section {
+    padding: 45px 16px 55px !important;
+  }
+
+  .who-we-are-grid {
+    gap: 25px;
   }
 
   .hero {
@@ -351,7 +375,7 @@ html, body {
     left: 0;
     width: 100% !important;
     height: 0%;
-    transition: height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: height 0.12s ease-out;
   }
 
   .tech-interactive-grid {
@@ -478,10 +502,7 @@ html, body {
   }
 
   .nav-exact.active .nav-logo {
-    position: fixed !important;
-    top: 18px !important;
-    left: 20px !important;
-    z-index: 1000002 !important;
+    display: none !important;
   }
 
   .nav-exact.active .hamburger-exact {
