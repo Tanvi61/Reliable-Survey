@@ -3,6 +3,12 @@
  * Controls the rectangular floating showcase card on the right side of the hero
  */
 document.addEventListener('DOMContentLoaded', function () {
+    // Ensure background drone video starts playing immediately without displaying static poster
+    const heroVideo = document.querySelector('.hero-video-bg');
+    if (heroVideo) {
+        heroVideo.play().catch(function () {});
+    }
+
     const box = document.getElementById('heroShowcaseBox');
     if (!box) return;
 
