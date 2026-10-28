@@ -1182,8 +1182,8 @@
   .footer-grid {
     display: flex !important;
     flex-direction: column !important;
-    gap: 26px !important;
-    margin-bottom: 45px !important;
+    gap: 22px !important;
+    margin-bottom: 12px !important;
   }
   .footer-brand {
     order: 1 !important;
@@ -1203,6 +1203,7 @@
   }
   .footer-col-map {
     order: 5 !important;
+    margin-bottom: 0 !important;
   }
   .footer-map-card {
     height: 180px !important;
@@ -1210,15 +1211,21 @@
   }
 
   .footer {
-    padding-bottom: 25px !important;
+    padding-bottom: 20px !important;
     background-position: bottom center !important;
   }
 
   .footer-bottom {
     flex-direction: column !important;
     text-align: center !important;
-    gap: 12px !important;
-    padding-top: 45px !important;
-    padding-bottom: 25px !important;
+    gap: 8px !important;
+    margin-top: 15px !important;
+    padding-top: 15px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .copyright-info {
+    transform: translateY(0) !important;
+    gap: 5px !important;
   }
 }
