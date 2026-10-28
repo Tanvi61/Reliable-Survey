@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://www.reliablelandsurvey.in/sitemap.xml
-Sitemap: https://www.reliablelandsurvey.in/sitemap.txt
