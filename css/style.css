@@ -4314,6 +4314,8 @@ a, button, .btn, .nav-btn, summary, [role="button"], .tab-btn, .industry-card, .
   box-sizing: border-box !important;
 }
 
+/* Unified Hero Banners: Pure, high-clarity background presentation matching canonical pages */
+
 .about-hero-exact > img.bg-pan-anim,
 .about-hero-exact > img {
   position: absolute !important;
@@ -4339,7 +4341,7 @@ a, button, .btn, .nav-btn, summary, [role="button"], .tab-btn, .industry-card, .
   flex-direction: column !important;
   justify-content: center !important;
   padding: 0 8% !important;
-  z-index: 2 !important;
+  z-index: 3 !important;
   pointer-events: none !important;
   box-sizing: border-box !important;
 }
@@ -4350,19 +4352,24 @@ a, button, .btn, .nav-btn, summary, [role="button"], .tab-btn, .industry-card, .
   pointer-events: auto !important;
 }
 
-.about-hero-exact h1 {
+.about-hero-exact h1,
+.service-hero-title {
   font-size: clamp(2rem, 3.2vw, 2.85rem) !important;
   line-height: 1.15 !important;
   margin-bottom: 12px !important;
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.85), 0 0 30px rgba(255, 255, 255, 0.85) !important;
+  color: var(--dark-navy) !important;
+  font-weight: 800 !important;
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.95), 0 0 32px rgba(255, 255, 255, 0.95), 0 1px 3px rgba(255, 255, 255, 0.95) !important;
 }
 
 .about-hero-exact p {
-  font-size: clamp(0.95rem, 1.1vw, 1.05rem) !important;
-  line-height: 1.55 !important;
-  max-width: 520px !important;
+  font-size: clamp(1rem, 1.15vw, 1.12rem) !important;
+  line-height: 1.62 !important;
+  max-width: 530px !important;
   margin-bottom: 16px !important;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.95), 0 0 20px rgba(255, 255, 255, 0.95) !important;
+  color: #1e293b !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 14px rgba(255, 255, 255, 0.95), 0 0 28px rgba(255, 255, 255, 0.95), 0 1px 2px rgba(255, 255, 255, 0.95) !important;
 }
 
 /* Mobile & Tablet Responsiveness */
@@ -4373,6 +4380,7 @@ a, button, .btn, .nav-btn, summary, [role="button"], .tab-btn, .industry-card, .
     min-height: 440px !important;
     padding-top: 120px !important;
   }
+
   .about-hero-exact > div {
     top: 120px !important;
     height: calc(100% - 120px) !important;
@@ -4383,8 +4391,8 @@ a, button, .btn, .nav-btn, summary, [role="button"], .tab-btn, .industry-card, .
     margin-bottom: 10px !important;
   }
   .about-hero-exact p {
-    font-size: 0.95rem !important;
-    line-height: 1.48 !important;
+    font-size: 0.98rem !important;
+    line-height: 1.5 !important;
     margin-bottom: 14px !important;
   }
 }

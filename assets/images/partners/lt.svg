@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
+  <rect width="200" height="80" fill="white"/>
+  <!-- L&T Logo approximation -->
+  <!-- Red square background -->
+  <rect x="10" y="10" width="55" height="55" rx="4" fill="#E4002B"/>
+  <!-- White L&T text inside -->
+  <text x="37" y="48" font-family="Arial Black, sans-serif" font-size="22" font-weight="900" fill="white" text-anchor="middle">L&amp;T</text>
+  <!-- Company name -->
+  <text x="80" y="30" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#333">LARSEN &amp;</text>
+  <text x="80" y="45" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#333">TOUBRO</text>
+  <text x="80" y="60" font-family="Arial, sans-serif" font-size="8" fill="#E4002B">Building India</text>
+</svg>

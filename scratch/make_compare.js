@@ -1,0 +1,34 @@
+const fs = require('fs');
+
+const html = `<!DOCTYPE html>
+<html>
+<head>
+<style>
+.box { width: 100%; max-width: 1200px; height: 480px; position: relative; overflow: hidden; margin-bottom: 20px; border: 2px solid red; background: #eaf4fc; }
+.box img { width: 100%; height: 100%; object-fit: cover; }
+.overlay { position: absolute; top: 135px; left: 8%; z-index: 3; color: #082B4C; font-family: sans-serif; }
+</style>
+</head>
+<body>
+<h3>1. Current: full.jpg with center 25%</h3>
+<div class="box"><img src="../assets/images/total-station-hero-full.jpg" style="object-position: center 25%;"></div>
+
+<h3>2. full.jpg with left 30%</h3>
+<div class="box"><img src="../assets/images/total-station-hero-full.jpg" style="object-position: left 30%;"></div>
+
+<h3>3. full.jpg with 10% 40%</h3>
+<div class="box"><img src="../assets/images/total-station-hero-full.jpg" style="object-position: 10% 40%;"></div>
+
+<h3>4. hero.jpg (726h) with left 20%</h3>
+<div class="box"><img src="../assets/images/total-station-hero.jpg" style="object-position: left 20%;"></div>
+
+<h3>5. hero.jpg (726h) with left 40%</h3>
+<div class="box"><img src="../assets/images/total-station-hero.jpg" style="object-position: left 40%;"></div>
+
+<h3>6. panoramic-1920.png</h3>
+<div class="box"><img src="../assets/images/total-station-hero-panoramic-1920.png" style="object-position: center center;"></div>
+</body>
+</html>`;
+
+fs.writeFileSync('scratch/compare.html', html, 'utf8');
+console.log('compare.html created');

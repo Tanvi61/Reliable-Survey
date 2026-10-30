@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 80" width="220" height="80">
+  <rect width="220" height="80" fill="white"/>
+  <!-- Vedanta logo - Red V shape -->
+  <polygon points="10,15 35,65 60,15 52,15 35,50 18,15" fill="#E4002B"/>
+  <!-- Company name -->
+  <text x="75" y="38" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#E4002B">VEDANTA</text>
+  <text x="75" y="55" font-family="Arial, sans-serif" font-size="9" fill="#555" letter-spacing="1">RESOURCES PLC</text>
+</svg>

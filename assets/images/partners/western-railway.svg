@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 80" width="230" height="80">
+  <rect width="230" height="80" fill="white"/>
+  <!-- Western Railway maroon circle emblem -->
+  <circle cx="38" cy="40" r="28" fill="#7B1C2B"/>
+  <!-- Wheel spokes inside -->
+  <circle cx="38" cy="40" r="18" fill="none" stroke="white" stroke-width="2"/>
+  <circle cx="38" cy="40" r="6" fill="white"/>
+  <line x1="38" y1="22" x2="38" y2="58" stroke="white" stroke-width="2"/>
+  <line x1="20" y1="40" x2="56" y2="40" stroke="white" stroke-width="2"/>
+  <line x1="25" y1="27" x2="51" y2="53" stroke="white" stroke-width="2"/>
+  <line x1="51" y1="27" x2="25" y2="53" stroke="white" stroke-width="2"/>
+  <!-- WR text inside circle -->
+  <text x="38" y="45" font-family="Arial Black, sans-serif" font-size="10" font-weight="900" fill="white" text-anchor="middle">WR</text>
+  <!-- Company name -->
+  <text x="76" y="30" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#7B1C2B">WESTERN</text>
+  <text x="76" y="45" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#7B1C2B">RAILWAY</text>
+  <text x="76" y="60" font-family="Arial, sans-serif" font-size="8" fill="#555">Ministry of Railways, India</text>
+</svg>

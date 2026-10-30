@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
+  <rect width="200" height="80" fill="white"/>
+  <!-- NHAI logo approximation - Green/Yellow highway symbol -->
+  <!-- Road/highway symbol -->
+  <rect x="10" y="12" width="55" height="55" rx="4" fill="#2E7D32"/>
+  <!-- Highway lines -->
+  <rect x="35" y="18" width="5" height="43" fill="white" rx="1"/>
+  <!-- Yellow road markers -->
+  <rect x="30" y="24" width="3" height="10" fill="#FDD835" rx="1"/>
+  <rect x="43" y="24" width="3" height="10" fill="#FDD835" rx="1"/>
+  <rect x="30" y="40" width="3" height="10" fill="#FDD835" rx="1"/>
+  <rect x="43" y="40" width="3" height="10" fill="#FDD835" rx="1"/>
+  <!-- Text -->
+  <text x="75" y="30" font-family="Arial Black, sans-serif" font-size="16" font-weight="900" fill="#2E7D32">NHAI</text>
+  <text x="75" y="45" font-family="Arial, sans-serif" font-size="8" fill="#555">National Highways</text>
+  <text x="75" y="57" font-family="Arial, sans-serif" font-size="8" fill="#555">Authority of India</text>
+</svg>
