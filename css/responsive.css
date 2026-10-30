@@ -574,9 +574,25 @@ html, body {
     width: 100% !important; 
     background: linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 55%, rgba(255,255,255,0.3) 100%) !important; 
   }
+  .hero-brand-direct {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 120px auto 16px auto !important;
+    z-index: 20 !important;
+    display: flex !important;
+  }
+  .brand-direct-text {
+    font-size: 18px !important;
+    letter-spacing: 2px !important;
+  }
+  .brand-direct-line {
+    width: 65px !important;
+  }
   .hero-content-exact { 
     position: relative; left: 0; top: 0; width: 100%; max-width: 100%; 
-    padding: 140px 20px 20px; text-align: center; display: flex; flex-direction: column; align-items: center;
+    padding: 10px 20px 20px !important; text-align: center; display: flex; flex-direction: column; align-items: center;
   }
   .hero-showcase-box {
     position: relative !important;
@@ -587,7 +603,7 @@ html, body {
     max-width: 520px !important;
     height: 300px !important;
   }
-  .hero-eyebrow-container { justify-content: center; }
+  .hero-eyebrow-container { display: none !important; }
   .hero-title-exact, .hero-desc-exact { font-size: 3.2rem; line-height: 1.1; width: 100%; max-width: 100%; }
   .hero-desc-exact { font-size: 1.1rem; }
   .desktop-break { display: none; }
