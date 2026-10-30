@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120" width="300" height="120">
+  <defs>
+    <linearGradient id="esriGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C590"/>
+      <stop offset="100%" stop-color="#00966C"/>
+    </linearGradient>
+    <linearGradient id="esriGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#008FD5"/>
+      <stop offset="100%" stop-color="#005A9E"/>
+    </linearGradient>
+    <linearGradient id="esriGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00B4D8"/>
+      <stop offset="100%" stop-color="#0077B6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ArcGIS Pro Icon (Layered Isometric Geospatial Cube) -->
+  <g transform="translate(18, 22) scale(0.95)">
+    <!-- Bottom layer -->
+    <path d="M40,4 L74,23 L74,48 L40,68 L6,48 L6,23 Z" fill="url(#esriGrad2)" opacity="0.95"/>
+    <path d="M40,4 L74,23 L40,42 L6,23 Z" fill="#00A2E8"/>
+    <path d="M40,42 L74,23 L74,48 L40,68 Z" fill="#006699"/>
+    <path d="M6,23 L40,42 L40,68 L6,48 Z" fill="#004C73"/>
+
+    <!-- Middle layer / grid lines -->
+    <path d="M40,16 L65,30 L40,45 L15,30 Z" fill="url(#esriGrad3)" opacity="0.9"/>
+
+    <!-- Top floating layer (Green GIS theme) -->
+    <g transform="translate(0, -10)">
+      <path d="M40,10 L68,26 L68,42 L40,58 L12,42 L12,26 Z" fill="url(#esriGrad1)"/>
+      <path d="M40,10 L68,26 L40,42 L12,26 Z" fill="#2ECC71"/>
+      <path d="M40,42 L68,26 L68,42 L40,58 Z" fill="#27AE60"/>
+      <path d="M12,26 L40,42 L40,58 L12,42 Z" fill="#1E8449"/>
+      
+      <!-- Coordinate grid accents -->
+      <line x1="26" y1="18" x2="54" y2="34" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.8"/>
+      <line x1="54" y1="18" x2="26" y2="34" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.8"/>
+      <circle cx="40" cy="26" r="3" fill="#ffffff"/>
+    </g>
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(108, 68)">
+    <text font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="31" fill="#0F172A" letter-spacing="-0.5px">ArcGIS</text>
+    <text x="108" y="0" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="31" fill="#007AC2" letter-spacing="-0.5px">Pro</text>
+  </g>
+</svg>
